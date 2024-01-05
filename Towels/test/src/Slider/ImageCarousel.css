@@ -1,0 +1,10 @@
+/* BootstrapImageCarousel.css */
+
+.fade-transition {
+  opacity: 0;
+  transition: opacity 0.5s ease; /* Adjust the transition duration as needed */
+}
+
+.fade-transition.carousel-item-active {
+  opacity: 1;
+}

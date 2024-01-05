@@ -1,0 +1,64 @@
+/* Footer.css */
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .footer-left,
+  .footer-right {
+    width: 100%;
+  }
+  
+  
+  .contact-details,
+  .sample-address {
+    margin-top: 20px;
+  }
+  
+  
+  @media (min-width: 768px) {
+    .footer {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      text-align: left;
+    }
+  
+    .footer-left,
+    .footer-right {
+        width: 48%;
+      
+    }
+    .footer-right{
+        margin-left:auto;
+    }
+
+    .footer-right {
+      margin-left: auto;
+    }
+  
+    .contact-details,
+    .sample-address {
+      margin-top: 0; /* Remove the top margin to align them in a row */
+    }
+  
+    .contact-details {
+      margin-right: 20px; /* Add spacing between contact details and sample address */
+    }
+    
+  }
+
+
+
+
+  /* .flex{
+    display: flex;
+    justify-content:space-between;
+  } */
+  
