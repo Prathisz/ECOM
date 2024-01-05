@@ -10,7 +10,7 @@ const Navbar = () => {
       <div className="company-name">JOTEX</div>
       <div className="nav-links">
       <Link to={"/"}  style={{textDecoration:"none"}}>  <div className="nav-link">Home</div></Link>
-      <Link to={"/product"}  style={{textDecoration:"none"}}>  <div className="nav-link">Products</div></Link>
+      <Link to={"/pro"}  style={{textDecoration:"none"}}>  <div className="nav-link">Products</div></Link>
       <Link to={"/blogs"}  style={{textDecoration:"none"}}>  <div className="nav-link">Blogs</div></Link>
       {/* <Link to={"/Gallery"}  style={{textDecoration:"none"}}>  <div className="nav-link">Gallery</div></Link> */}
       <Link to={"/Account"}  style={{textDecoration:"none"}}>    <div className="nav-link">My Account</div></Link>

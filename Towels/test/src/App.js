@@ -10,17 +10,18 @@ import CardComponent from './Choose/choose';
 import {BrowserRouter, Routes,Route} from 'react-router-dom';
 import SignUp from './sign up/sign';
 import Popular from './Popular/Popular';
+import ShopContextProvider from './Context/Context';
 function App() {
   return (
     <div >
-      
+      <ShopContextProvider>
    <Navbar/>
    <BootstrapImageCarousel/>
    <Popular/>
    <CardComponent/>
    <FeedbackApp/>
    <Footer/>
-  
+   </ShopContextProvider>
    
     </div>
   );
