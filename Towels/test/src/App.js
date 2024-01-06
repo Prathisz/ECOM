@@ -22,7 +22,15 @@ function App() {
    <FeedbackApp/>
    <Footer/>
    </ShopContextProvider>
-   
+
+{/* <BrowserRouter>
+   <Navbar/>
+   <Routes>
+    <Route path='/' element={<Home/>}/>
+    <Route path='/' element={<Home/>}/>
+   </Routes>
+
+   </BrowserRouter> */}
     </div>
   );
 }

@@ -7,6 +7,7 @@ import ImageCarousel from './Slider/ImageCarousel';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import SignUp from './sign up/sign';
 import Pro from './Product/pro';
+import Product from './Product/Product';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,6 +17,7 @@ root.render(
     <Route path="/" element={<App/>}/>
     <Route path="/Signup" element={<SignUp/>}/>
     <Route path="/pro" element={<Pro/>}/>
+    <Route path='/productId' element={<Product/>}/>
    </Routes>
    </BrowserRouter>
   </React.StrictMode>
