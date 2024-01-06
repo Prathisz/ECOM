@@ -5,7 +5,6 @@ import Item from '../Item/item'
 import './pro.css';
 import Footer from '../Footer/Footer';
 import dropdown_icon from '../Assets/dropdown_icon.png';
-import { Link } from 'react-router-dom';
 function Pro() {
   return (
     <>

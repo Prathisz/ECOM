@@ -9,9 +9,6 @@ const {product}=props;
       <div className='productdisplay-left'>
         <div className='productdisplay-img-list'>
             <img src={product.image} ></img>
-            <img src={product.image} ></img>
-            <img src={product.image} ></img>
-            <img src={product.image} ></img>
         </div>
         <div className='productdisplay-img'>
             <img src={product.image} className='productdisplay-main-img'></img>
@@ -25,7 +22,7 @@ const {product}=props;
             <img src={star_icon} ></img>
             <img src={star_icon} ></img>
             <img src={star_dull_icon} ></img>
-            <p>(122)</p>
+            <p>{product.new_price}</p>
         </div>
       </div>
     </div>
