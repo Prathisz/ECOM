@@ -3,22 +3,23 @@ import { ShopContext } from '../Context/Context'
 import { useParams } from 'react-router-dom';
 import ProductDisplay from '../ProductDisplay/ProductDisplay';
 import Breadcrum from '../Breadcrum/Breadcrum';
-import { useLocation } from 'react-router-dom';
+import Navbar from '../Nav/Navbar';
 const Product = () => {
 
-    const location = useLocation();
+    // const location = useLocation();
     // useEffect(()=>{},[location])
 //the data here will be an object since an object was
 
 // if(location.state){
-    const data = location.state;
-    // const {all_product} = useContext(ShopContext);
-    // const {productId} = useParams();
-    // const product=all_product.find((e)=>e.id===Number(data));
+    // const data = location.state;
+    const {all_product} = useContext(ShopContext);
+    const {productId} = useParams();
+    const product=all_product.find((e)=>e.id===Number(productId));
   return (
     <div>
-        <Breadcrum product={data} />
-      <ProductDisplay product={data}/>
+        <Navbar/>
+        <Breadcrum product={product} />
+      <ProductDisplay product={product}/>
     </div>
   )}
 // }
