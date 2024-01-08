@@ -11,6 +11,7 @@ import {BrowserRouter, Routes,Route} from 'react-router-dom';
 import SignUp from './sign up/sign';
 import Popular from './Popular/Popular';
 import ShopContextProvider from './Context/Context';
+import ProductDisplay from './ProductDisplay/ProductDisplay';
 function App() {
   return (
     <div >
@@ -21,6 +22,7 @@ function App() {
    <CardComponent/>
    <FeedbackApp/>
    <Footer/>
+   {/* <ProductDisplay/ */}
    </ShopContextProvider>
 
 {/* <BrowserRouter>
