@@ -4,11 +4,33 @@ import './SignUp.css';
 import Footer from '../Footer/Footer';
 import Navbar from '../Nav/Navbar';
 const SignUp = () => {
+  const [state,setState]=useState("LogIn");
   const [formData, setFormData] = useState({
     username: '',
     email: '',
     password: '',
   });
+
+
+  const login = async() =>{
+    console.log("Login func exe",formData);
+    let responseData;
+    await fetch('http://localhost:3000/signup',{
+      method:'POST',
+      headers:{
+        Accept:'application/form-data',
+        'Content-Type':'application/json',
+      },
+      body:JSON.stringify(formData),
+    }).then((response)=>response.json()).then((data)=>responseData=data)
+    if(responseData.success){
+      localStorage.setItem('auth-token',responseData.token);
+      window.location.replace("/");
+    }
+  }
+  const signup = async() =>{
+    console.log("signup func exe",formData);
+  }
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -26,17 +48,17 @@ const SignUp = () => {
     <Navbar/>
     <div className="signup-container">
       <form className="signup-form" onSubmit={handleSubmit}>
-        <h2>Sign Up</h2>
-        <label>
+        <h2>{state}</h2>
+       {state==="Sign Up"?<label>
           Username:
-          <input
+        <input
             type="text"
             name="username"
             value={formData.username}
             onChange={handleChange}
             required
           />
-        </label>
+        </label>:<></>} 
         <label>
           Email:
           <input
@@ -57,8 +79,11 @@ const SignUp = () => {
             required
           />
         </label>
-        <button type="submit">Sign Up</button>
-        <p className='login'>Already have an account? <span>Login</span></p>
+        <button type="submit" onClick={()=>{state==='LogIn'?login():signup()}}>Continue</button>
+        {state==="Sign Up"? <p className='login'>Already have an account? <span onClick={()=>{setState("LogIn")}}>Login</span ></p>:<p className='login'>Create an account? <span onClick={()=>{setState("Sign Up")}} >Click Here</span ></p>
+
+}
+
       </form>
 
     </div>

@@ -20,6 +20,36 @@ app.get("/",(req,res)=>{
 })
 
 
+//creating endpoint for user login
+
+app.post('/sign',async(req,res)=>{
+    let user = awit Users.findOne({email:req.body.email});
+    if(user){
+        const passCompare=req.body.password === user.password;
+        if(passCompare){
+            const date = {
+                user:{
+                    id:user.id
+                }
+            }
+            const token=jwt.sign(data,'secret_ecom');
+            res.json({success:true,token});
+        }
+        else{
+            res.json({success:false,errors:"Wrong Password"});
+        }
+    }
+    else{
+        res.json({success:false,errors:"Wrong email id"});
+    }
+})
+
+
+
+
+
+
+
 
 app.listen(port,(error)=>{
     if(!error){
