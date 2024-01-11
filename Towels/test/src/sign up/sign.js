@@ -80,7 +80,7 @@ const SignUp = () => {
           />
         </label>
         <button type="submit" onClick={()=>{state==='LogIn'?login():signup()}}>Continue</button>
-        {state==="Sign Up"? <p className='login'>Already have an account? <span onClick={()=>{setState("LogIn")}}>Login</span ></p>:<p className='login'>Create an account? <span onClick={()=>{setState("Sign Up")}} >Click Here</span ></p>
+        {state==="Sign Up"? <p className='login'>Already have an account?? <span onClick={()=>{setState("LogIn")}}>Login</span ></p>:<p className='login'>Create an account? <span onClick={()=>{setState("Sign Up")}} >Click Here</span ></p>
 
 }
 
